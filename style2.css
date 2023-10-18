@@ -1,0 +1,71 @@
+/*https://css-tricks.com/snippets/css/a-guide-to-flexbox/ for more details*/
+nav ul { 
+  list-style: none;
+  padding-left: 0;
+  /*display:flex;  /*USE FOR HORIZONTAL SPREAD*/
+  justify-content: space-evenly; /*Will order/distribute items inside a flexbox or grid container only; no use in display:block*/
+  flex-wrap: wrap; /* In case if there isn't enough space for a box and all its items, it will move some items to another line below*/
+
+}
+
+nav li{ /* Select all items/children in nav*/
+
+}
+
+ul > * {/* Every child of every ul*/
+
+}
+
+nav ul > * {/*All children of items in nav*/
+  flex:auto; /*Will auto-grow boxes to fill the area the flexbox occupies*/
+}
+
+nav a { 
+  border: 1px solid black;
+  display: block;
+  padding: 1rem; 
+  transition: .50s;
+  
+  background-color: seashell;
+  color:red;
+  
+  text-align: center;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: black;
+  color: blue;
+
+  text-decoration: underline; 
+}
+
+nav a:active { 
+  background-color: yellow;
+  color:green;
+  
+  transition:none;
+}
+
+html, body{
+  font-size: 32px;
+}
+
+/*Media queries; conditional CSS*/
+@media(width > 1024px){ /*When width is greater than 500 px*/
+  nav ul { 
+    display:flex; /*Enables flexbox when sizes are big enough to support it*/
+    gap: 1rem;
+  }
+  nav ul > *{
+    flex:auto;
+  }
+}
+
+@media (hover:hover){
+  /*When hover is supported*/
+}
+
+@media (orientation:landscape){
+  /*When screen orientation is landscape or portrait*/
+}

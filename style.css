@@ -1,0 +1,51 @@
+nav ul { /* Remove bullets on navigation list 
+          - nav ul targets all nav ul lists;
+          - IF nav li would target all nav li items 
+          
+          NOTE: keep a reset CSS file to filter out style items that you would like to normally see
+          - But perhaps use Tailwind to not even bother with that
+          */
+  list-style: none;
+  padding-left: 0;
+}
+
+/* DON'T DO THIS: PADDING ON HERE IS A BAD IDEA AS IT REDUCES CLICAKBLE ZONE
+nav li{
+  padding:1rm;
+  background-color: aliceblue;
+  border: 1px solid black;
+  color: yellow;
+}
+*/
+nav a { /* This code will make the area clickable */
+  border: 1px solid black;
+  display: block; /*Will make the buttons into a sorted block without overlap*/
+  padding: 0.5 1rem; /*rem = scale to size of font*/
+  transition: .50s;
+  
+  background-color: seashell;
+  color:red;
+  
+  text-align: center;
+  text-decoration: none;/*Remove defaulted underlines*/
+}
+
+/*To center something inline: text-*/
+
+nav a:hover {
+  background-color: black;
+  color: blue;
+
+  text-decoration: underline; /*HYPERLINKS SHOULD HAVE UNDERLINES*/
+}
+
+nav a:active { /*WHEN IT IS CLICKED*/
+  background-color: yellow;
+  color:green;
+  
+  transition:none;
+}
+
+html, body{
+  font-size: 32px;
+}
